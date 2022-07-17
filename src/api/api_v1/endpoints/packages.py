@@ -13,7 +13,6 @@ router = APIRouter()
 async def get_multiple_packages(
     skip: int = 0,
     limit: int = 10,
-    current_user: User = Depends(get_current_user),
 ):
     return await package.get_many(skip, limit)
 
